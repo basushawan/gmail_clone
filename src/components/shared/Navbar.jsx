@@ -1,6 +1,8 @@
 import React from 'react'
-import { CiCircleQuestion } from 'react-icons/ci'
+import Avatar from 'react-avatar'
+import { CiCircleQuestion, CiSettings } from 'react-icons/ci'
 import { IoIosSearch } from 'react-icons/io'
+import { PiDotsNineBold } from 'react-icons/pi'
 import { RxHamburgerMenu } from 'react-icons/rx'
 
 const Navbar = () => {
@@ -24,7 +26,24 @@ const Navbar = () => {
       <div className="hidden md:block">
         <div className="flex gap-2 items-center">
             <div className="p-3 rounded-full hover:bg-gray-100 cursor-pointer">
-                <CiCircleQuestion/>
+                <CiCircleQuestion size={"20px"}/>
+            </div>
+        </div>
+      </div>
+      <div className="hidden md:block">
+        <div className="flex gap-2 items-center">
+            <div className="p-3 rounded-full hover:bg-gray-100 cursor-pointer">
+                <CiSettings size={"20px"}/>
+            </div>
+        </div>
+      </div>
+      <div className="hidden md:block">
+        <div className="flex gap-2 items-center">
+            <div className="p-3 rounded-full hover:bg-gray-100 cursor-pointer">
+                <PiDotsNineBold size={"20px"}/>
+            </div>
+            <div className="relative cursor-pointer">
+                <Avatar src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3jxuUsThVHIIZeKkEQTBLIsBcTfg4yhE-Q&s" round={true} size={'40px'}/>
             </div>
         </div>
       </div>
