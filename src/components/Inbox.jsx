@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { FaCaretDown, FaUserFriends } from "react-icons/fa";
 import { GoTag } from "react-icons/go";
 import { IoMdMore, IoMdRefresh } from "react-icons/io";
-import { MdCropSquare, MdInbox } from "react-icons/md";
+import { MdCropSquare, MdInbox, MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
+import Messages from "./Messages";
 
 const mailType = [
   { icon: <MdInbox size={"20px"} />, text: "Primary" },
@@ -28,6 +29,11 @@ const Inbox = () => {
           </div>
         </div>
       </div>
+      <div className="flex items-center gap-2">
+        <p className="text-sm text-gray-500">1-50 of 1000</p>
+        <button><MdKeyboardArrowLeft size={"24px"}/></button>
+        <button><MdKeyboardArrowRight size={"24px"}/></button>
+      </div>
       <div className="h-[80vh] overflow-y-auto">
         <div className="flex items-center gap-1">
           {mailType.map((item, index) => {
@@ -41,7 +47,7 @@ const Inbox = () => {
                   mailTypeSeleceted === index
                     ? "text-blue-600 border-b-blue-600 border-b-4"
                     : "border-b-4 border-b-transparent"
-                } w--60 hover:bg-gray-100 flex items-center gap-5 p-4`}
+                } w-60 hover:bg-gray-100 flex items-center gap-5 p-4`}
               >
                 {item.icon}
                 <span>{item.text}</span>
@@ -49,6 +55,7 @@ const Inbox = () => {
             );
           })}
         </div>
+        <Messages/>
       </div>
     </div>
   );
