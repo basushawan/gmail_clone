@@ -41,9 +41,9 @@ const Sidebar = () => {
         </button>
       </div>
       <div className="text-gray-500">
-        {sidebarItmes.map((item, index) => {
+        {sidebarItmes.map((item,index) => {
           return (
-            <div className="flex items-center gap-4 pl-6 py-1 rounded-r-full my-2 hover:cursor-pointer hover:bg-gray-200">
+            <div key={index} className="flex items-center gap-4 pl-6 py-1 rounded-r-full my-2 hover:cursor-pointer hover:bg-gray-200">
               {item.icon}
               <p>{item.text}</p>
             </div>
